@@ -1,15 +1,18 @@
 {
-  "name": "mernapp",
-  "version": "1.0.0",
+  "name": "true-price",
+  "version": "0.1.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start-mongo":"sudo service mongodb start; mongo",
+    "stop-mongo": "mongo admin --eval 'db.shutdownServer()'",
+    "start-app": "cd client; npm run start",
     "start": "node server.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Luis Ball",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
