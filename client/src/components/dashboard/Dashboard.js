@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+
 import { logoutUser } from "../../actions/authActions";
+
+import PriceLookup from "../priceLookup/PriceLookup";
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -35,6 +38,8 @@ class Dashboard extends Component {
             >
               Logout
             </button>
+            {/* Price lookup form */}
+            <PriceLookup />
           </div>
         </div>
       </div>
