@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const {truePrice} = require('truePrice');
+const {truePrice} = require('true-price');
 
 router.post('/search', (req, res) => {
     console.log(req.body)
