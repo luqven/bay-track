@@ -22,7 +22,6 @@ const InputForm = function(props) {
         e.preventDefault();
         console.log(itemName)
         props.fetchListing(itemName)
-        setName('')
     }
 
     const handleKeypress = e => {
@@ -65,7 +64,7 @@ const InputForm = function(props) {
 }
 
 const mapStateToProps = (state) => {
-    // debugger
+    console.log(state)
     return {
         list: state.listings.list,
         averagePrice: state.listings.averagePrice,
