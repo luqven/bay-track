@@ -20,7 +20,6 @@ const InputForm = function(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(itemName)
         props.fetchListing(itemName)
     }
 
