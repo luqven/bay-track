@@ -1,7 +1,8 @@
 import { LISTINGS_LOADING, SET_LISTING } from "../actions/types";
 
 const initialState = {
-    listings: {},
+    list: {},
+    averagePrice: '',
     loading: false,
 };
 
@@ -18,14 +19,18 @@ export default function (state = initialState, action) {
                 newListings[idx] = {...listing}
             })
 
-            newState.listings = newListings
-            debugger
+            newState.list = newListings
+            newState.averagePrice = action.payload.averagePrice
+            newState.loading = false
+            // debugger
             return newState
+
         case LISTINGS_LOADING:
             return {
                 ...state,
                 loading: true
             };
+
         default:
             return state;
     };

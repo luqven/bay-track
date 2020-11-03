@@ -9,7 +9,8 @@ router.post('/search', (req, res) => {
     let listing = truePrice.fetchAveragePrice(listingName).then(response => {
         console.log('SERP for ' + listingName, response)
         return res.json({
-            listings: response.listings
+            listings: response.listings,
+            averagePrice: '$' + Math.floor(response.averagePrice)
         })
     })
 })

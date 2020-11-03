@@ -6,6 +6,13 @@ import { fetchListing } from "../../actions/listingActions"
 
 const InputForm = function(props) {
     const [itemName, setName] = React.useState('');
+    const [listings, setListings] = React.useState(props.list)
+    const [averagePrice, setPrice] = React.useState(props.averagePrice)
+
+    React.useEffect(() => {
+        setListings(props.list)
+        setPrice(props.averagePrice)
+    }, [props])
 
     const handleChange = (event) => {
         setName(event.target.value);
@@ -24,7 +31,7 @@ const InputForm = function(props) {
         }
     };
 
-    console.log(itemName)
+    console.log(props)
 
     return (
         <div class="input-field">
@@ -41,16 +48,16 @@ const InputForm = function(props) {
                     >
                 </input>
             </form>
-            <ul>
-                {Object.keys(props.listings).map((id) => {
+            <h3>{averagePrice}</h3>
+            <ul style={{overflow: 'auto', maxHeight: 500}}>
+                {Object.keys(listings).length > 0 && Object.keys(listings).map((id) => {
                     return (
-                        <li>{
-                            '[' + 
-                            props.listings[id].price +
-                            '] ' +
-                            props.listings[id].title
-                        }</li>
-                        )
+                        <li>
+                            <div dangerouslySetInnerHTML={ {__html: listings[id].image} }>
+                            </div>
+                            <a href={listings[id].link}>{'[' + listings[id].price + '] ' + listings[id].title}</a>
+                        </li>
+                    )
                 })}
             </ul>
         </div>
@@ -58,9 +65,11 @@ const InputForm = function(props) {
 }
 
 const mapStateToProps = (state) => {
-    debugger
+    // debugger
     return {
-        listings: {...state.listings}
+        list: state.listings.list,
+        averagePrice: state.listings.averagePrice,
+        loading: state.listings.loading,
     }
 }
 
