@@ -51,9 +51,10 @@ const InputForm = function(props) {
                 {Object.keys(listings).length > 0 && Object.keys(listings).map((id) => {
                     return (
                         <li>
-                            <div dangerouslySetInnerHTML={ {__html: listings[id].image} }>
+                            <div className="listing-image">
+                                <img src={listings[id].image}></img>
                             </div>
-                            <a href={listings[id].link}>{'[' + listings[id].price + '] ' + listings[id].title}</a>
+                            <a href={listings[id].link}>{'[$' + listings[id].price + '] ' + listings[id].title}</a>
                         </li>
                     )
                 })}
