@@ -33,7 +33,7 @@ class Navbar extends Component {
               </button>
               </li>}
           <Link
-            to="/"
+            to="/dashboard"
             className="col s5 brand-logo center"
           >
             BayPricer
