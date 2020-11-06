@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import { logoutUser } from "../../actions/authActions";
 
-import PriceLookup from "../priceLookup/PriceLookup";
+import PriceLookup from "../priceLookup/priceLookupContainer";
 
 class Dashboard extends Component {
   onLogoutClick = e => {

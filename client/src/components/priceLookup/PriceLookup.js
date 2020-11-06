@@ -2,14 +2,28 @@ import React, {useState, useEffect} from 'react';
 
 import LookupForm from './LookupForm';
 
-function PriceLookup() {
+function PriceLookup(props) {
 
-    const [product, setProduct] = useState(null)
-    const [averagePrice, setPrice] = useState(null)
+    const [listings, setListings] = useState(props.list)
+    const [averagePrice, setPrice] = useState(props.averagePrice)
+
+    useEffect(() => {
+        setListings(props.list)
+        setPrice(props.averagePrice)
+    }, [props])
+
+    const handleSubmit = (e, itemName) => {
+        e.preventDefault();
+        props.fetchListing(itemName)
+    }
 
     return (
         <div className="price-lookup">
-            <LookupForm />
+            <LookupForm 
+            listings={listings} 
+            averagePrice={averagePrice} 
+            handleSubmit={handleSubmit}
+            />
         </div>
     )
 }

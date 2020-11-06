@@ -1,27 +1,18 @@
-import React from 'react';
+import React, {  useState } from 'react';
 import { connect } from "react-redux";
 
 import { fetchListing } from "../../actions/listingActions"
 
 
 const InputForm = function(props) {
-    const [itemName, setName] = React.useState('');
-    const [listings, setListings] = React.useState(props.list)
-    const [averagePrice, setPrice] = React.useState(props.averagePrice)
-
-    React.useEffect(() => {
-        setListings(props.list)
-        setPrice(props.averagePrice)
-    }, [props])
+    const [itemName, setName] = useState('')
+    const handleSubmit = props.handleSubmit
+    const listings = props.listings
+    const averagePrice = props.averagePrice
 
     const handleChange = (event) => {
         setName(event.target.value);
     };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        props.fetchListing(itemName)
-    }
 
     const handleKeypress = e => {
         if (e.keyCode === 13) {
@@ -29,11 +20,9 @@ const InputForm = function(props) {
         }
     };
 
-    console.log(props)
-
     return (
-        <div class="input-field">
-            <form onSubmit={ e => handleSubmit(e)}>
+        <div className="input-field">
+            <form onSubmit={ e => handleSubmit(e, itemName)}>
                 <label htmlFor="first_name">Search</label>
                 <input 
                     onChange={handleChange} 
@@ -42,7 +31,7 @@ const InputForm = function(props) {
                     placeholder="item or listing name" 
                     id="first_name" 
                     type="text" 
-                    class="validate"
+                    className="validate"
                     >
                 </input>
             </form>
@@ -50,7 +39,7 @@ const InputForm = function(props) {
             <ul style={{overflow: 'auto', maxHeight: 500}}>
                 {Object.keys(listings).length > 0 && Object.keys(listings).map((id) => {
                     return (
-                        <li>
+                        <li key={id}>
                             <div className="listing-image">
                                 <img src={listings[id].image}></img>
                             </div>
