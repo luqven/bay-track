@@ -1,6 +1,11 @@
 # Bay-Track
 
-Track average price of an ebay item over time.
+Lookup average eBay listing prices.
+
+- An example project for [true-price](https://github.com/luqven/truePrice/blob/master/README.md) package.
+
+- [See it in action 🔗](https://tprice-development.herokuapp.com/)
+
 
 ## Stack
 
