@@ -6,6 +6,8 @@ Lookup average eBay listing prices.
 
 - [See it in action 🔗](https://tprice-development.herokuapp.com/)
 
+![](https://media.giphy.com/media/Aw9b1xW4FgfTcEDQbY/giphy.gif)
+
 
 ## Stack
 

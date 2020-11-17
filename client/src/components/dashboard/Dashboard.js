@@ -11,8 +11,8 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
 
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row" style={{width: '100%'}}>
+      <div style={{ minHeight: "75vh" }} className="container valign-wrapper">
+        <div className="row" style={{ width: "100%" }}>
           <div className="landing-copy col s12 center-align">
             {/* Price lookup form */}
             <PriceLookup />
