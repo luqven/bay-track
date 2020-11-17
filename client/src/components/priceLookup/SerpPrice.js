@@ -7,11 +7,11 @@ function SerpPrice({ listing }) {
         <h4
           style={{
             fontSize: "1rem",
-            margin: "1.52rem 0 .912rem 0",
+            margin: "-0.68rem 0px 0.912rem",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
-            color: "lightgreen"
+            color: "rgb(0 191 29)"
           }}
         >
           {listing.price}
