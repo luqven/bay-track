@@ -8,6 +8,7 @@ Lookup average eBay listing prices.
 
 ![](https://media.giphy.com/media/Aw9b1xW4FgfTcEDQbY/giphy.gif)
 
+
 ## Stack
 
 This project uses the following technologies:
