@@ -2083,10 +2083,10 @@ tree-kill@^1.2.1:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
-"true-price@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/true-price/-/true-price-0.1.4.tgz#31749ad3f6709b15c871a0926cd1c3116e257858"
-  integrity sha512-TcoG5DsRqD/8KaHUzAlXE8esJlqWC8hTwdePNwGi/9TdV/wK/ubcRoYafvfwDfLC6LOrPrCZWnWyNjw95DVQ0A==
+"true-price@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/true-price/-/true-price-0.1.5.tgz#93c716ef0e33a997ea87440ce23e12bbe9732c66"
+  integrity sha512-dVRgiUUr4b7WDzQKIs4/BoghBqJ9bZJ/bp4QNTUWyFYGBLE377YOhhRYcfH1yeHOp03FTF9U4HA3KbnMlZ6HjA==
   dependencies:
     agent-base "^5.1.1"
     balanced-match "^1.0.0"
