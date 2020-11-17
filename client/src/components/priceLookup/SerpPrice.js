@@ -1,6 +1,6 @@
 import React from "react";
 
-function SerpLink({ listing }) {
+function SerpPrice({ listing }) {
   return (
     <div style={{ width: 145 }}>
       <a className="listing-link" href={listing.link}>
@@ -10,14 +10,15 @@ function SerpLink({ listing }) {
             margin: "1.52rem 0 .912rem 0",
             overflow: "hidden",
             textOverflow: "ellipsis",
-            whiteSpace: "nowrap"
+            whiteSpace: "nowrap",
+            color: "lightgreen"
           }}
         >
-          {listing.title}
+          {listing.price}
         </h4>
       </a>
     </div>
   );
 }
 
-export default SerpLink;
+export default SerpPrice;
